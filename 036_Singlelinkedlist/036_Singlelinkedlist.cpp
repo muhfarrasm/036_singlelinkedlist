@@ -18,4 +18,14 @@ void addNode() {
     cin >> nim;
     cout << "Masukkan nama : ";
     cin >> nama;
+
+    if (START == NULL || nim <= START->noMhs) {
+        if (START != NULL && nim == START->noMhs) {
+            cout << "\nNIM sudah ada!" << endl;
+            return;
+        }
+        nodeBaru->next = START;
+        START = nodeBaru;
+        return;
+    }
 }
